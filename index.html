@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>enviar_email</title>
+	<title>Formulario</title>
 	<!--[if IE]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -14,14 +14,16 @@
 </head>
 <body>
 	<div class="container">
-	<?php
-	$email= 'ricardoramos021@gmail.com';
-	$ASSUNTO= $_POST['assunto'];
-	$mensagem= $_POST['mensagem'];
-		mail ($email, $ASSUNTO, $mensagem);
-	
-	?>
+		<form method="post" action="enviar_email.php">
+		<label>Assunto</label>
+		<input type="text" name="assunto">
 		
+		<label>Mensagem</label>
+		<textarea name="mensagem"></textarea>
+		
+		<button type="submit">Enviar</button>
+			
+		</form>
 	</div>
 </body>
 </html>
